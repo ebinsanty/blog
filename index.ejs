@@ -1,0 +1,21 @@
+<% include   ./partials/header %>
+
+<div >
+<h1 >INDEX PAGE MACHA</h1>
+
+<% blogs.forEach(function(blog){ %>
+ <div >
+   <h2> <%= blog.title %></h2>
+   <img src="<%= blog.image %> ">
+   <p>  <%= blog.body %>
+   </p>
+   <%= blog.created %>
+   <p>
+  
+  <a class="ui inverted blue button" href="/blog/<%=blog._id%>">MORE INFO</a>
+  </p>
+ </div>
+</div>
+
+<% }) %>
+
